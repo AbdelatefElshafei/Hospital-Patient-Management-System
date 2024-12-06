@@ -1,0 +1,116 @@
+The Appointment class is a Java implementation for managing appointments in a scheduling system. It supports functionalities like scheduling, canceling, rescheduling,
+and viewing appointment details, with validations for date and time.
+
+          #`Appointment(int appointmentID, Patient patient, Date date, Date.Time time)`  
+Purpose:  
+Constructor to initialize an appointment with specific details.
+
+Explanation:  
+This method creates a new `Appointment` object by setting the appointment ID, patient, date, and time. It also initializes the `status` attribute to "Scheduled" and displays a confirmation message.
+
+
+
+          #`getAppointmentID()`  
+Purpose:  
+Retrieve the unique ID of the appointment.
+
+Explanation:  
+This accessor method returns the `appointmentID`, allowing other components to identify the specific appointment.
+
+
+
+          #`setAppointmentID(int appointmentID)`  
+Purpose:  
+Update the appointment's ID.
+
+Explanation:  
+This mutator method allows modifying the `appointmentID` in case the identifier needs to be updated.
+
+
+
+          #`getStatus()`  
+Purpose:  
+Retrieve the current status of the appointment.
+
+Explanation:  
+Returns the `status` of the appointment (e.g., Scheduled, Rescheduled, Canceled), providing a snapshot of its state.
+
+
+
+          #`setStatus(String status)`  
+Purpose:  
+Update the appointment's status.
+
+Explanation:  
+Sets the `status` to a new value (e.g., Scheduled, Canceled) as part of appointment management actions.
+
+
+          #`getTime()`  
+Purpose:  
+Retrieve the appointment time.
+
+Explanation:
+This method provides the current `time` of the appointment.
+
+
+
+          #`setTime(Date.Time time)`  
+Purpose:
+Update the appointment time.
+
+Explanation:
+Modifies the `time` to a new value for rescheduling purposes or corrections.
+
+
+
+          #`getDate()`  
+Purpose:
+Retrieve the appointment date.
+
+Explanation:
+Returns the `date` attribute, allowing other components to access the scheduled date.
+
+
+
+          #`setDate(Date date)`  
+Purpose:
+Update the appointment date.
+
+Explanation:
+Modifies the `date` attribute for rescheduling or corrections.
+
+
+
+          #`schedule()`  
+Purpose:
+Set the appointment status to "Scheduled."
+
+Explanation:
+Updates the `status` to "Scheduled," ensuring the appointment is marked as active after being initialized or modified.
+
+
+
+          #`cancel()`  
+Purpose: 
+Cancel the appointment.
+
+Explanation:
+Sets the `status` to "Canceled" to reflect that the appointment is no longer active.
+
+
+
+          #`reschedule(int month, int day, int hour, int minute)`  
+Purpose:
+Change the date and time of the appointment with validation.
+
+Explanation:
+This method updates the `date` and `time` attributes while validating the inputs based on month-specific day limits and proper hour/minute ranges. Invalid inputs prompt the user to select a valid date or time.
+
+
+
+          #`toString()`  
+Purpose: 
+Provide a formatted string with appointment details.
+
+Explanation:
+Returns a human-readable string containing the appointment ID, patient ID, date, time, and current status for display or debugging purposes.
