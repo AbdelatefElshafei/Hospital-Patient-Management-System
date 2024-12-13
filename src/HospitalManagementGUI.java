@@ -16,13 +16,11 @@ public class HospitalManagementGUI {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(800, 600);
 
-        // Background panel with an image
         JPanel mainPanel = new BackgroundPanel("src//Assests//Back.jpg");
         mainPanel.setLayout(new BorderLayout());
 
-        // Menu Panel
         JPanel menuPanel = new JPanel(new GridLayout(5, 1));
-        menuPanel.setOpaque(false); // Make the panel transparent for the background
+        menuPanel.setOpaque(false); 
         JButton managePatientsButton = new JButton("Manage Patients");
         JButton manageAppointmentsButton = new JButton("Manage Appointments");
         JButton manageBillingButton = new JButton("Manage Billing");
@@ -37,29 +35,25 @@ public class HospitalManagementGUI {
 
         mainPanel.add(menuPanel, BorderLayout.WEST);
 
-        // Dynamic Content Panel
+        
         JPanel contentPanel = new JPanel(new CardLayout());
-        contentPanel.setOpaque(false); // Make the content panel transparent
+        contentPanel.setOpaque(false); 
         mainPanel.add(contentPanel, BorderLayout.CENTER);
 
-        // Manage Patients Panel
         JPanel managePatientsPanel = new JPanel();
         managePatientsPanel.setLayout(new BoxLayout(managePatientsPanel, BoxLayout.Y_AXIS));
-        managePatientsPanel.setOpaque(false); // Transparent
+        managePatientsPanel.setOpaque(false);
         JButton addPatientButton = new JButton("Add Patient");
         JButton findPatientButton = new JButton("Find Patient");
         managePatientsPanel.add(addPatientButton);
         managePatientsPanel.add(findPatientButton);
 
-        // Add Patient Dialog
         addPatientButton.addActionListener(e -> showAddPatientDialog());
 
-        // Find Patient Dialog
         findPatientButton.addActionListener(e -> showFindPatientDialog());
 
         contentPanel.add(managePatientsPanel, "ManagePatients");
 
-        // Manage Appointments Panel
         JPanel manageAppointmentsPanel = new JPanel();
         manageAppointmentsPanel.setLayout(new BoxLayout(manageAppointmentsPanel, BoxLayout.Y_AXIS));
         manageAppointmentsPanel.setOpaque(false); // Transparent
@@ -68,15 +62,12 @@ public class HospitalManagementGUI {
         manageAppointmentsPanel.add(scheduleAppointmentButton);
         manageAppointmentsPanel.add(cancelAppointmentButton);
 
-        // Schedule Appointment Dialog
         scheduleAppointmentButton.addActionListener(e -> showScheduleAppointmentDialog());
 
-        // Cancel Appointment Dialog
         cancelAppointmentButton.addActionListener(e -> showCancelAppointmentDialog());
 
         contentPanel.add(manageAppointmentsPanel, "ManageAppointments");
 
-        // Event Listeners for Navigation
         managePatientsButton.addActionListener(e -> switchPanel(contentPanel, "ManagePatients"));
         manageAppointmentsButton.addActionListener(e -> switchPanel(contentPanel, "ManageAppointments"));
         exitButton.addActionListener(e -> System.exit(0));
