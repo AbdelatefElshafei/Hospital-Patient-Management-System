@@ -1,0 +1,64 @@
+The AppointmentQueue class provides a simple mechanism for managing a queue of appointments using the First-In-First-Out (FIFO) principle.
+It uses a LinkedList as the underlying implementation of the Queue interface.
+The class supports adding appointments, processing the next appointment, and retrieving all current appointments.
+
+
+
+      private Queue<Appointment> queue
+
+Type: Queue<Appointment>
+Description:
+A queue for storing Appointment objects in a FIFO order.
+Internally implemented using a LinkedList.
+
+
+       public void addAppointment(Appointment appointment)
+Purpose:
+Adds a new appointment to the end of the queue.
+
+
+appointment (Appointment): 
+The appointment to be added to the queue.
+
+How It Works:
+Uses the offer() method of the Queue interface to insert the appointment at the end of the queue.
+
+If the queue is full (unlikely with a LinkedList), offer() returns false instead of throwing an exception.
+
+
+
+      public Appointment processNextAppointment()
+
+Purpose:
+Retrieves and removes the appointment at the front of the queue.
+
+Returns:
+Appointment: The appointment at the front of the queue.
+If the queue is empty, it returns null.
+
+
+How It Works:
+Uses the poll() method of the Queue interface to:
+Retrieve the head of the queue (the first Appointment added).
+Remove the Appointment from the queue.
+If the queue is empty, poll() returns null
+
+
+
+
+      public List<Appointment> getAllAppointments()
+
+Purpose:
+Retrieves a list of all appointments currently in the queue without modifying the queue.
+
+Returns:
+List<Appointment>: A list of appointments in the queue, maintaining their order.
+
+
+How It Works:
+Creates a new ArrayList containing all elements of the queue using the ArrayList constructor.
+The queue itself is not altered during this process.
+
+
+
+
