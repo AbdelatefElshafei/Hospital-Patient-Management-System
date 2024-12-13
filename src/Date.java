@@ -73,6 +73,10 @@ public class Date
     {
         System.out.print(day + "/" + month);
     }
+    @Override
+    public String toString() {
+        return day + "/" + month;
+    }
 
     public static class Time
     {
@@ -94,7 +98,10 @@ public class Date
                 this.minute=minute;
             }
         }
-
+        @Override
+        public String toString() {
+            return String.format("%02d:%02d", hour, minute);
+        }
         public int getHour()
         {
             return hour;
@@ -118,5 +125,6 @@ public class Date
             System.out.println(hour + ":" + minute);
         }
     }
+    
 }
 
