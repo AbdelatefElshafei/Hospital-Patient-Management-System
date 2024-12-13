@@ -44,13 +44,13 @@ public class PatientManagementSystem {
         switch (type) {
             case "patient":
                 List<Patient> patients = new ArrayList<>();
-                patientList.displayInOrder(); // Add to List if needed
+                patientList.displayInOrder(); 
                 break;
             case "appointment":
                 reportGenerator.generateAppointmentReport(appointmentQueue);
                 break;
             case "revenue":
-                reportGenerator.generateRevenueReport(billing, new ArrayList<>()); // Add patients
+                reportGenerator.generateRevenueReport(billing, new ArrayList<>());
                 break;
             default:
                 System.out.println("Invalid report type.");

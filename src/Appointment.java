@@ -135,4 +135,9 @@ public class Appointment
         return "Appointment ID: " + getAppointmentID() + "\n" + "Patient ID: " + patient.getPatientID() + "\n" + "Date : " + date.getMonth() + "/" + date.getDay() + " " + time.getHour() + ":" + time.getMinute() + "\n" + "Status: " + getStatus() ;
 
     }
+
+    public Patient getPatient() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getPatient'");
+    }
 }
