@@ -64,4 +64,24 @@ public class Patient
             }
         }
     }
+    @Override
+public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("Patient ID: ").append(patientID).append("\n");
+    sb.append("Name: ").append(name).append("\n");
+    sb.append("Age: ").append(age).append("\n");
+    sb.append("Contact Info: ").append(contactInfo).append("\n");
+    sb.append("Medical History: ").append(medicalHistory).append("\n");
+    sb.append("Visit Records: ").append(visitRecords.isEmpty() ? "No visits recorded." : "").append("\n");
+
+    for (Appointment appointment : visitRecords) {
+        sb.append("    Appointment ID: ").append(appointment.getAppointmentID())
+          .append(", Date: ").append(appointment.getDate())
+          .append(", Time: ").append(appointment.getTime())
+          .append(", Status: ").append(appointment.getStatus()).append("\n");
+    }
+
+    return sb.toString();
+}
+
 }    

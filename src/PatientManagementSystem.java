@@ -3,13 +3,14 @@ import java.util.List;
 
 public class PatientManagementSystem {
     private PatientBST patientList;
-    private WaitingList waitingList;
-    private List<Appointment> appointmentQueue;
+    AppointmentQueue appointmentQueue1 = new AppointmentQueue();
+    //private WaitingList waitingList;
+    List<Appointment> appointmentQueue;
     private Billing billing;
 
     public PatientManagementSystem() {
         patientList = new PatientBST();
-        waitingList = new WaitingList();
+        //waitingList = new WaitingList();
         appointmentQueue = new ArrayList<>();
         billing = new Billing();
     }
@@ -28,6 +29,16 @@ public class PatientManagementSystem {
         }
     }
 
+    public Patient findPatien(String patientID) {
+        Patient patient = patientList.search(patientID);
+        if (patient != null) {
+            return patient;
+        } else {
+            return null;
+        }
+        
+    }
+
     public void scheduleAppointment(Appointment appointment) {
         appointmentQueue.add(appointment);
         appointment.getPatient().addvisits(appointment);
@@ -39,7 +50,7 @@ public class PatientManagementSystem {
         System.out.println("Appointment canceled: ID " + appointmentID);
     }
 
-    public void generateReport(String type) {
+    /*public void generateReport(String type) {
         ReportGenerator reportGenerator = new ReportGenerator();
         switch (type) {
             case "patient":
@@ -54,6 +65,5 @@ public class PatientManagementSystem {
                 break;
             default:
                 System.out.println("Invalid report type.");
-        }
+        }*/
     }
-}
