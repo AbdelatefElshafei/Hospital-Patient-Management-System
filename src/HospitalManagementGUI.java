@@ -17,7 +17,7 @@ public class HospitalManagementGUI {
         frame.setSize(800, 600);
 
         // Background panel with an image
-        JPanel mainPanel = new BackgroundPanel("Back.jpg");
+        JPanel mainPanel = new BackgroundPanel("src//Assests//Back.jpg");
         mainPanel.setLayout(new BorderLayout());
 
         // Menu Panel
@@ -140,7 +140,7 @@ public class HospitalManagementGUI {
 
         findButton.addActionListener(e -> {
             String id = idField.getText();
-            Patient patient = pms.findPatient(id);
+            Patient patient = pms.findPatien(id);
             if (patient != null) {
                 JOptionPane.showMessageDialog(null, patient.toString());
             } else {
@@ -172,10 +172,10 @@ public class HospitalManagementGUI {
 
         scheduleButton.addActionListener(e -> {
             String patientId = patientIdField.getText();
-            Patient patient = pms.findPatient(patientId);
+            Patient patient = pms.findPatien(patientId);
             if (patient != null) {
                 Appointment appointment = new Appointment(
-                        pms.getAppointments().size() + 1, patient, dateField.getText(), timeField.getText());
+                        pms. appointmentQueue1.getAllAppointments().size() + 1, patient, dateField.getText(), timeField.getText());
                 pms.scheduleAppointment(appointment);
                 JOptionPane.showMessageDialog(null, "Appointment scheduled successfully!");
             } else {
@@ -246,8 +246,4 @@ public class HospitalManagementGUI {
         }
     }
 
-    public static void main(String[] args) {
-        PatientManagementSystem pms = new PatientManagementSystem();
-        new HospitalManagementGUI(pms);
-    }
 }

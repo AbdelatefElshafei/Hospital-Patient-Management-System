@@ -6,8 +6,19 @@ public class Appointment
     private Date date;
     private Date.Time time;
     private String status;
+    private String date1;
+    private String time2;
 
-
+    public Appointment(int appointmentID, Patient patient, String date, String time)
+    {
+        this.appointmentID = appointmentID;
+        this.patient = patient;
+        this.date1 = date;
+        this.time2 = time;
+        this.status = "Scheduled";
+        System.out.println("Appointment scheduled successfully.");
+        System.out.println();
+    }
     public Appointment(int appointmentID, Patient patient, Date date, Date.Time time)
     {
         this.appointmentID = appointmentID;
