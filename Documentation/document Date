@@ -1,0 +1,89 @@
+      Class: Date
+This is the main class, representing a date with two properties: month and day.
+
+  
+      private int month: 
+Stores the month of the date (1 to 12).
+
+  
+      private int day: 
+Stores the day of the date (1 to 31 depending on the month).
+
+  
+      public Date(int month, int day)
+This constructor initializes a Date object and ensures that the month and day are valid according to the rules of the calendar.
+  
+Validation:
+
+Months with 31 days: January, March, May, July, August, October, December (1, 3, 5, 7, 8, 10, 12).
+If day is not in the range 1–31, prints "choose another day".
+February (2):
+If day is not in the range 1–28, prints "choose another day".
+Months with 30 days: April, June, September, November (4, 6, 9, 11).
+If day is not in the range 1–30, prints "choose another day".
+If month is outside the range 1–12, prints "choose another month".
+If valid, assigns month and day to the corresponding fields.
+
+
+      public int getMonth()
+
+Returns the value of the month field.
+      public void setMonth(int month)
+Updates the value of the month field.
+  
+      public int getDay()
+Returns the value of the day field.
+  
+      public void setDay(int day)
+Updates the value of the day field.
+
+
+      public void display()
+  Prints the date in the format day/month. Example: 15/7.
+      public String toString()
+Returns the date as a String in the format day/month. Example: 15/7. This overrides the default toString method inherited from Object.
+
+
+      Nested Class: Time
+The Time class is defined inside the Date class and represents a time of day with hour and minute
+      private int hour: 
+Stores the hour of the time (1–12).
+      private int minute:
+Stores the minute of the time (0–59).
+      public Time(int hour, int minute)
+This constructor initializes a Time object and ensures that the hour and minute are valid.
+
+      Validation:
+If hour is outside the range 1–12, prints "choose another hour".
+If minute is outside the range 0–59, prints "choose another min".
+If valid, assigns hour and minute to the corresponding fields.
+
+
+
+      public int getHour()
+Returns the value of the hour field.
+
+  
+      public void setHour(int hour)
+Updates the value of the hour field.
+
+  
+      public int getMinute()
+Returns the value of the minute field.
+
+  
+      public void setMinute(int minute)
+Updates the value of the minute field.
+
+
+  public String toString()
+Returns the time as a String in the format hh:mm, using leading zeros for single-digit values. (Example: 05:07).
+
+  
+public void display()
+Prints the time in the format hour:minute. (Example: 5:7).
+
+  
+
+  
+
