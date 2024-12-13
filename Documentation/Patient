@@ -1,0 +1,215 @@
+The Patient class represents a patient in a healthcare system. It stores personal details, medical history, and a list of visit records (appointments). 
+This class provides methods for accessing, updating, and displaying patient information, as well as managing visit records.
+
+
+      private String patientID
+Description: Unique identifier for the patient.
+
+
+
+      private String name
+Description: Full name of the patient.
+
+
+
+      private int age
+Description: Age of the patient.
+
+
+
+      private String contactInfo
+Description: Contact details for the patient (e.g., phone number or email address).
+
+
+
+      private String medicalHistory
+Description: Summary of the patient's medical history.
+
+
+
+Constructor
+
+      public Patient(String patientID, String name, int age, String contactInfo, String medicalHistory)
+
+
+      private String patientID
+Description: Unique identifier for the patient.
+
+
+      private String name
+Description: Full name of the patient.
+
+
+      private int age
+Description: Age of the patient.
+
+
+      private String contactInfo
+Description: Contact details for the patient (e.g., phone number or email address).
+
+      private String medicalHistory
+Description: Summary of the patient's medical history.
+
+
+
+      private List<Appointment> visitRecords
+Description: A list of appointments associated with the patient.
+
+Implementation: Managed as an ArrayList.
+
+
+
+      private List<Appointment> visitRecords
+Description: A list of appointments associated with the patient.
+Implementation: Managed as an ArrayList.
+
+
+
+    
+
+      patientID (String): Unique identifier for the patient.
+
+name (String):
+Full name of the patient.
+
+age (int):
+Age of the patient.
+
+contactInfo (String):
+Contact details of the patient.
+
+medicalHistory (String): 
+Summary of the patient's medical history.
+
+Implementation:
+Initializes the visitRecords field as an empty ArrayList.
+
+
+Getters
+
+      public String getPatientID()
+
+Purpose: 
+Returns the patient ID.
+
+Returns: 
+String - The patient's unique identifier.
+
+      public String getContactInfo()
+
+Purpose:
+Returns the patient's contact information.
+
+Returns: 
+String - The contact details of the patient.
+
+      public int getAge()
+
+Purpose:
+Returns the patient's age.
+
+Returns: 
+int - The patient's age.
+
+      public String getMedicalHistory()
+
+Purpose: 
+Returns the patient's medical history.
+
+Returns:
+String - The summary of the patient's medical history.
+
+      public String getName()
+
+Purpose:
+Returns the patient's name.
+
+Returns: 
+String - The full name of the patient.
+
+      public List<Appointment> getVisitRecords()
+
+Purpose:
+Returns the list of the patient's visit records (appointments).
+
+Returns:
+List<Appointment> - A list of Appointment objects.
+
+             Setters and Updaters
+
+      public void updateContactInfo(String newContactInfo)
+
+Purpose:
+Updates the patient's contact information.
+
+Parameters:
+newContactInfo (String): The new contact information to be set.
+
+Implementation:
+Updates the contactInfo field.
+Prints a message confirming the update.
+
+      public void addvisits(Appointment visit)
+
+Purpose:
+Adds a new appointment to the patient's visit records.
+
+Parameters:
+visit (Appointment): 
+The appointment to be added.
+
+Implementation:
+Adds the visit to the visitRecords list.
+
+Prints a message indicating the appointment has been added.
+
+                 Display Methods
+
+      public void displayPatientInfo()
+
+Purpose:
+Displays the patient's details and visit records.
+
+Output:
+Patient details (ID, name, age, contact info, and medical history).
+
+Visit records, including:
+Appointment ID
+Date
+Time
+Status
+If there are no visits, it displays "No visits recorded."
+
+
+
+@Override public String toString()
+Purpose:
+Returns a string representation of the patient's details and visit records.
+
+Returns:
+String: A formatted string containing patient details and visit records.
+
+Implementation:
+Uses a StringBuilder to construct the string.
+Appends "No visits recorded" if the visitRecords list is empty
+
+
+
+
+
+
+
+
+Patient Management:
+Stores essential patient details such as ID, name, age, contact info, and medical history.
+
+Visit Records:
+Maintains a list of appointments for each patient.
+Supports adding and displaying visit records.
+
+Encapsulation:
+Uses private fields with public getters and setters to ensure controlled access to patient data.
+
+Formatted Output:
+Provides well-structured information via displayPatientInfo() and toString() methods.
+
