@@ -1,0 +1,63 @@
+The Billing class is designed to manage and track billing information for patients in a healthcare setting. 
+It uses a HashMap to associate patient IDs with their outstanding billing amounts.
+
+    
+
+      private Map<String, Double> billingRecords
+Stores the billing data :
+Key (String): Represents the patient's ID.
+Value (Double): Represents the patient's outstanding bill amount.
+
+
+
+      public Billing()
+Description: Initializes the Billing object and sets up an empty HashMap for billingRecords.
+Usage:
+When a new Billing system is created, it starts with no records.
+
+
+
+      public void generateBill(String patientID, double amount)
+Description:
+Adds a new bill amount for the specified patient.
+If the patient already has an outstanding balance, the new bill amount is added to the existing balance.
+
+
+
+      patientID (String): The unique identifier for the patient.
+amount (double): The amount to be billed.
+Behavior:If the patient ID exists in billingRecords, the method adds the amount to the current outstanding balance.
+If the patient ID does not exist, it creates a new entry with the amount as the outstanding balance.
+Prints a confirmation message with the patient ID and the billed amount.
+
+
+      public void addPayment(String patientID, double payment)
+Description:
+Processes a payment made by a patient and reduces their outstanding balance.
+If the patient ID does not exist in billingRecords, it notifies that there is no billing record for the patient.
+
+      patientID (String): The unique identifier for the patient.
+payment (double): The payment amount to be subtracted from the outstanding balance.
+Behavior:
+If the patient ID exists:
+Subtracts the payment from the current outstanding balance.
+Updates the new balance in billingRecords.
+Prints a confirmation message with the payment amount and patient ID.
+If the patient ID does not exist:
+Prints a message stating that no billing record exists for the given patient ID.
+
+
+
+      public double getPaymentStatus(String patientID)
+Description:
+Retrieves the current outstanding balance for a given patient.
+If the patient ID does not exist, it returns 0.0.
+Parameters:
+      patientID (String): The unique identifier for the patient.
+Returns:
+double: The current outstanding balance for the patient, or 0.0 if no record exists.
+
+
+
+
+

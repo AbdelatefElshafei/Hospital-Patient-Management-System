@@ -1,0 +1,121 @@
+The PatientManagementSystem class manages patient records, appointments, and billing for a healthcare facility.
+It integrates with supporting systems such as a binary search tree for patient records (PatientBST), an appointment queue (AppointmentQueue),
+and a billing system (Billing).
+
+
+
+
+Fields:
+
+          private PatientBST patientList
+Description: A binary search tree structure used to store and manage patient records.
+
+          private Billing billing
+Description: An instance of the Billing system for managing patient billing.
+
+          
+
+          AppointmentQueue appointmentQueue1
+Description: A queue for managing patient appointments.
+
+          List<Appointment> appointmentQueue
+Description: A list that stores scheduled appointments.
+
+Implementation: Managed as an ArrayList.
+
+Constructor:
+
+          public PatientManagementSystem()
+Purpose: Initializes a new instance of the PatientManagementSystem class with default components.
+Implementation:
+Initializes patientList as a new instance of PatientBST.
+Initializes appointmentQueue as an empty ArrayList.
+Initializes billing as a new instance of Billing.
+
+
+
+
+            public void addPatient(Patient patient)
+
+Purpose: Adds a new patient to the system.
+
+Parameters:
+
+patient (Patient): The patient to be added.
+
+Implementation:
+Inserts the patient into the patientList.
+Prints a confirmation message with the patient's name.
+
+
+
+          public void findPatient(String patientID)
+
+Purpose: Searches for a patient by their ID and displays their information if found.
+
+Parameters:
+
+          patientID (String): The unique identifier of the patient.
+
+Implementation:
+Searches for the patient in the patientList.
+Calls the displayPatientInfo() method if the patient is found.
+Prints "Patient not found." if no match is found.
+
+          public Patient findPatien(String patientID)
+
+Purpose: Searches for a patient by their ID and returns the patient object if found.
+Parameters:
+
+          patientID (String): The unique identifier of the patient.
+
+Returns:
+Patient: The Patient object if found, otherwise null.
+
+2. Appointment Management
+
+          public void scheduleAppointment(Appointment appointment)
+
+Purpose: Schedules a new appointment for a patient.
+
+Parameters:
+
+appointment (Appointment): The appointment to be scheduled.
+
+Implementation:
+Adds the appointment to the appointmentQueue list.
+Calls the addvisits() method of the Patient class to associate the appointment with the patient.
+Prints a confirmation message with the patient's name.
+
+Output:
+Example: Appointment scheduled for Patient: John Doe
+public void cancelAppointment(int appointmentID)
+Purpose: Cancels an existing appointment by its ID.
+
+Parameters:
+
+          appointmentID (int): The unique identifier of the appointment.
+
+Implementation:
+Removes the appointment from the appointmentQueue list using removeIf.
+Prints a confirmation message with the appointment ID.
+
+Output:
+Example: Appointment canceled: ID 101
+
+Dependencies
+
+          PatientBST:
+A binary search tree implementation for storing and retrieving patient records efficiently.
+
+          AppointmentQueue:
+A queue system for managing and processing patient appointments.
+
+          Billing:
+A billing system for tracking patient payments and outstanding balances.
+
+          Patient:
+Represents individual patient details and visit records.
+
+          Appointment:
+Represents an appointment with fields such as appointment ID, date, time, and patient.
