@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="436.0" prefWidth="624.0" style="-fx-background-color: white;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo2.HelloController">
+   <children>
+      <Pane layoutY="93.0" prefHeight="352.0" prefWidth="191.0" style="-fx-background-color: white;">
+         <children>
+            <Button fx:id="generateBillButton" layoutX="24.0" layoutY="42.0" mnemonicParsing="false" onAction="#F" prefHeight="31.0" prefWidth="144.0" text="Generate Bill" />
+            <Button fx:id="addPaymentButton" layoutX="24.0" layoutY="120.0" mnemonicParsing="false" onAction="#FF" prefHeight="31.0" prefWidth="144.0" text="Add Payment" />
+            <Button fx:id="getPaymentStatusButton" layoutX="24.0" layoutY="214.0" mnemonicParsing="false" onAction="#FFF" prefHeight="31.0" prefWidth="144.0" text="Get Payment Status" />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+      <Pane layoutY="-8.0" prefHeight="101.0" prefWidth="624.0" styleClass="root" stylesheets="@style.css">
+         <children>
+            <ImageView fitHeight="67.0" fitWidth="117.0" layoutX="14.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Billings.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="115.0" layoutY="23.0" prefHeight="46.0" prefWidth="117.0" text="Billings" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="31.0" />
+               </font>
+            </Label>
+            <Label layoutX="140.0" layoutY="46.0" prefHeight="46.0" prefWidth="131.0" text="Management" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+      <Pane fx:id="F" layoutX="194.0" layoutY="94.0" prefHeight="352.0" prefWidth="429.0" visible="false">
+         <children>
+            <Button layoutX="164.0" layoutY="203.0" mnemonicParsing="false" onAction="#onGenerateBillClick" prefHeight="31.0" prefWidth="101.0" text="Generate" />
+            <TextField fx:id="patientID" layoutX="86.0" layoutY="76.0" prefHeight="25.0" prefWidth="257.0" promptText="Patient ID" />
+            <TextField fx:id="Bill" layoutX="86.0" layoutY="133.0" prefHeight="25.0" prefWidth="257.0" promptText="Bill" />
+         </children>
+      </Pane>
+      <Pane fx:id="FF" layoutX="194.0" layoutY="94.0" prefHeight="352.0" prefWidth="429.0" visible="false">
+         <children>
+            <Button layoutX="156.0" layoutY="202.0" mnemonicParsing="false" onAction="#onAddPaymentClick" prefHeight="31.0" prefWidth="117.0" text="Add Payment" />
+            <TextField fx:id="patientId" layoutX="86.0" layoutY="76.0" prefHeight="25.0" prefWidth="257.0" promptText="Patient ID" />
+            <TextField fx:id="Payment" layoutX="86.0" layoutY="133.0" prefHeight="25.0" prefWidth="257.0" promptText="Bill" />
+         </children>
+      </Pane>
+      <Pane fx:id="FFf" layoutX="194.0" layoutY="94.0" prefHeight="352.0" prefWidth="429.0" visible="false">
+         <children>
+            <Button layoutX="156.0" layoutY="134.0" mnemonicParsing="false" onAction="#onGetPaymentStatusClick" prefHeight="31.0" prefWidth="117.0" text="Get" />
+            <TextField fx:id="patienti" layoutX="86.0" layoutY="76.0" prefHeight="25.0" prefWidth="257.0" promptText="Patient ID" />
+            <TextArea fx:id="stetus" editable="false" layoutX="31.0" layoutY="176.0" prefHeight="142.0" prefWidth="367.0" />
+         </children>
+      </Pane>
+      <Button layoutX="574.0" layoutY="413.0" mnemonicParsing="false" onAction="#handleBackButton" text="Back" />
+   </children>
+</AnchorPane>

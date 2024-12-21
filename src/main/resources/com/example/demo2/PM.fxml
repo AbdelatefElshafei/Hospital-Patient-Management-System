@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="416.0" prefWidth="600.0" style="-fx-background-color: white;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo2.HelloController">
+    <children>
+
+        <!-- Side Menu Pane -->
+        <AnchorPane layoutY="86.0" prefHeight="331.0" prefWidth="150.0" style="-fx-background-color: white;">
+            <children>
+                <Button fx:id="addPatientButton" layoutX="27.0" layoutY="28.0" mnemonicParsing="false" onAction="#handleAddPatientButton" prefHeight="25.0" prefWidth="109.0" text="Add Patient" />
+                <Button fx:id="findPatientButton" layoutX="27.0" layoutY="81.0" mnemonicParsing="false" onAction="#handleFindButton" prefHeight="25.0" prefWidth="109.0" text="Find Patient" />
+                <Button fx:id="addVisitRecordButton" layoutX="27.0" layoutY="136.0" mnemonicParsing="false" onAction="#handleAddButton" prefHeight="25.0" prefWidth="109.0" text="Add Visit" />
+                <Button fx:id="getPatientInfoButton" layoutX="27.0" layoutY="188.0" mnemonicParsing="false" onAction="#handleGetInfoButton" prefHeight="25.0" prefWidth="109.0" text="Get Patient Info" />
+                <Button fx:id="updateContactInfoButton" layoutX="27.0" layoutY="238.0" mnemonicParsing="false" onAction="#handleUpdateButton" prefHeight="25.0" prefWidth="109.0" text="Update Contact" />
+            </children>
+            <effect>
+                <DropShadow />
+            </effect>
+        </AnchorPane>
+        <!-- Header Pane -->
+        <AnchorPane prefHeight="86.0" prefWidth="600.0" styleClass="root" stylesheets="@style.css">
+            <children>
+                <ImageView fitHeight="85.0" fitWidth="109.0" layoutX="14.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../Patient.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="99.0" layoutY="21.0" prefHeight="17.0" prefWidth="109.0" text="Patient" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="29.0" />
+                    </font>
+                </Label>
+                <Label layoutX="131.0" layoutY="48.0" prefHeight="32.0" prefWidth="97.0" text="Management" textFill="WHITE">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Label>
+            </children>
+         <effect>
+            <DropShadow />
+         </effect>
+        </AnchorPane>
+      <Pane fx:id="Hidden" layoutX="184.0" layoutY="114.0" prefHeight="263.0" prefWidth="389.0">
+         <children>
+            <TextField fx:id="a" layoutX="14.0" layoutY="22.0" promptText="ID" />
+            <TextField fx:id="e" layoutX="73.0" layoutY="156.0" prefHeight="25.0" prefWidth="244.0" promptText="Midical" />
+            <TextField fx:id="f" layoutX="208.0" layoutY="71.0" promptText="Visit" />
+            <TextField fx:id="b" layoutX="208.0" layoutY="22.0" promptText="Name" />
+            <TextField fx:id="c" layoutX="14.0" layoutY="71.0" promptText="Age" />
+            <Button fx:id="addPatient" layoutX="120.0" layoutY="225.0" mnemonicParsing="false" onAction="#handleAddPatient" prefHeight="25.0" prefWidth="150.0" text="Add Patient" />
+            <TextField fx:id="d" layoutX="73.0" layoutY="120.0" prefHeight="25.0" prefWidth="244.0" promptText="Contact Info" />
+            <TextField fx:id="P" layoutX="133.0" layoutY="190.0" prefHeight="18.0" prefWidth="121.0" promptText="Priority" />
+         </children>
+      </Pane>
+      <Pane fx:id="Hidden1" layoutX="184.0" layoutY="114.0" prefHeight="263.0" prefWidth="389.0" visible="false">
+         <children>
+            <TextField fx:id="Search" layoutX="50.0" layoutY="26.0" prefHeight="32.0" prefWidth="291.0" promptText="Patient ID" />
+            <Button fx:id="SearchB" layoutX="120.0" layoutY="69.0" mnemonicParsing="false" onAction="#handleFindPatient" prefHeight="32.0" prefWidth="150.0" text="Search" />
+            <Label fx:id="label" alignment="CENTER" contentDisplay="CENTER" layoutX="12.0" layoutY="113.0" prefHeight="151.0" prefWidth="365.0" textAlignment="CENTER" />
+         </children>
+      </Pane>
+      <Pane fx:id="Hidden2" layoutX="196.0" layoutY="110.0" prefHeight="240.0" prefWidth="389.0" visible="false">
+         <children>
+            <TextField fx:id="visit" layoutX="37.0" layoutY="108.0" prefHeight="25.0" prefWidth="316.0" promptText="Visit Details" />
+            <Button layoutX="120.0" layoutY="162.0" mnemonicParsing="false" onAction="#handleAddVisit" prefHeight="25.0" prefWidth="150.0" text="Add Visit" />
+            <TextField fx:id="searchID" layoutX="37.0" layoutY="52.0" prefHeight="25.0" prefWidth="316.0" promptText="Patient ID" />
+         </children>
+      </Pane>
+      <Pane fx:id="Hidden3" layoutX="184.0" layoutY="114.0" prefHeight="263.0" prefWidth="389.0" visible="false">
+         <children>
+            <TextField fx:id="searchIDd" layoutX="73.0" layoutY="27.0" prefHeight="25.0" prefWidth="244.0" promptText="Patient ID" />
+            <Button layoutX="120.0" layoutY="70.0" mnemonicParsing="false" onAction="#handleGetPatientInfo" prefHeight="25.0" prefWidth="150.0" text="Search" />
+            <Label fx:id="label2" alignment="CENTER" contentDisplay="CENTER" layoutX="12.0" layoutY="106.0" prefHeight="151.0" prefWidth="365.0" textAlignment="CENTER" />
+         </children>
+      </Pane>
+      <Pane fx:id="Hidden4" layoutX="186.0" layoutY="104.0" prefHeight="277.0" prefWidth="397.0" visible="false">
+         <children>
+            <TextField fx:id="Cont" layoutX="37.0" layoutY="108.0" prefHeight="25.0" prefWidth="316.0" promptText="Contact" />
+            <Button layoutX="120.0" layoutY="162.0" mnemonicParsing="false" onAction="#handleUpdateContactInfo" prefHeight="25.0" prefWidth="150.0" text="Update" />
+            <TextField fx:id="SearchI" layoutX="37.0" layoutY="52.0" prefHeight="25.0" prefWidth="316.0" promptText="Patient ID" />
+         </children>
+      </Pane>
+      <Button layoutX="544.0" layoutY="382.0" mnemonicParsing="false" onAction="#handleBackButton" prefHeight="13.0" prefWidth="49.0" text="Back" />
+    </children>
+</AnchorPane>

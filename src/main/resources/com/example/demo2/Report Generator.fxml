@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="431.0" prefWidth="650.0" style="-fx-background-color: white;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo2.HelloController">
+   <children>
+      <Pane layoutY="94.0" prefHeight="336.0" prefWidth="165.0" style="-fx-background-color: white;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <Button layoutX="10.0" layoutY="269.0" mnemonicParsing="false" onAction="#OnBillingsReport" prefHeight="31.0" prefWidth="147.0" text=" Billing Report " />
+            <Button layoutX="10.0" layoutY="44.0" mnemonicParsing="false" onAction="#OnPatientReport" prefHeight="31.0" prefWidth="147.0" text="Patient Report" />
+            <Button layoutX="10.0" layoutY="120.0" mnemonicParsing="false" onAction="#OnAppointmentReport" prefHeight="31.0" prefWidth="147.0" text="Appointment Report" />
+            <Button layoutX="10.0" layoutY="196.0" mnemonicParsing="false" onAction="#OnreReport" prefHeight="31.0" prefWidth="147.0" text="Revenue Report" />
+         </children>
+      </Pane>
+      <Pane layoutX="-9.0" prefHeight="94.0" prefWidth="672.0" styleClass="root" stylesheets="@style.css">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <ImageView fitHeight="69.0" fitWidth="71.0" layoutX="20.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../report.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="89.0" layoutY="12.0" text="Report" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="31.0" />
+               </font>
+            </Label>
+            <Label layoutX="108.0" layoutY="47.0" text="Generation" textFill="WHITE">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <TextArea fx:id="Report" editable="false" layoutX="184.0" layoutY="116.0" prefHeight="275.0" prefWidth="464.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </TextArea>
+      <Button layoutX="579.0" layoutY="398.0" mnemonicParsing="false" onAction="#handleBackButton" prefHeight="31.0" prefWidth="79.0" text="Back" />
+   </children>
+</AnchorPane>

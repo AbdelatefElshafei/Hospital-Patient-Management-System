@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="415.0" prefWidth="645.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo2.HelloController">
+   <children>
+      <Pane layoutY="93.0" prefHeight="322.0" prefWidth="194.0" style="-fx-background-color: white;" stylesheets="@style.css">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <Button layoutX="10.0" layoutY="38.0" mnemonicParsing="false" onAction="#ADD" prefHeight="31.0" prefWidth="170.0" text="Add" />
+            <Button layoutX="12.0" layoutY="113.0" mnemonicParsing="false" onAction="#Remove" prefHeight="31.0" prefWidth="170.0" text="Remove" />
+            <Button layoutX="10.0" layoutY="189.0" mnemonicParsing="false" onAction="#View" prefHeight="31.0" prefWidth="170.0" text="View" />
+         </children>
+      </Pane>
+      <Pane prefHeight="93.0" prefWidth="645.0" styleClass="root" stylesheets="@style.css">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <ImageView fitHeight="67.0" fitWidth="82.0" layoutX="14.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../waiting-list.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="81.0" layoutY="14.0" text="Waiting" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="31.0" />
+               </font>
+            </Label>
+            <Label layoutX="163.0" layoutY="47.0" text="List" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="W" layoutX="194.0" layoutY="93.0" prefHeight="322.0" prefWidth="451.0" visible="false">
+         <children>
+            <TextField fx:id="Patien" layoutX="45.0" layoutY="56.0" prefHeight="31.0" prefWidth="340.0" promptText="Patient ID" />
+            <Button layoutX="149.0" layoutY="142.0" mnemonicParsing="false" onAction="#ADDPa" prefHeight="25.0" prefWidth="155.0" stylesheets="@style.css" text="Add" />
+         </children>
+      </Pane>
+      <Pane fx:id="Wi" layoutX="194.0" layoutY="93.0" prefHeight="322.0" prefWidth="451.0" visible="false">
+         <children>
+            <Button layoutX="149.0" layoutY="228.0" mnemonicParsing="false" onAction="#Rem" prefHeight="25.0" prefWidth="155.0" stylesheets="@style.css" text="Remove" />
+            <ImageView fitHeight="189.0" fitWidth="283.0" layoutX="100.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Queue.gif" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="Wa" layoutX="194.0" layoutY="93.0" prefHeight="322.0" prefWidth="451.0" visible="false">
+         <children>
+            <TextArea fx:id="Wait" editable="false" layoutX="14.0" layoutY="14.0" prefHeight="268.0" prefWidth="427.0">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </TextArea>
+         </children></Pane>
+      <Button layoutX="579.0" layoutY="376.0" mnemonicParsing="false" onAction="#handleBackButton" prefHeight="31.0" prefWidth="57.0" stylesheets="@style.css" text="Back" />
+   </children>
+</AnchorPane>

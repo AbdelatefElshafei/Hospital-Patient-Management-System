@@ -1,0 +1,26 @@
+/* Background gradient */
+.root {
+    -fx-background-color: linear-gradient(to bottom right, #3a7bd5, #86eaf1);
+}
+
+/* Left Pane */
+#leftPane {
+    -fx-background-color: linear-gradient(to bottom, #3a7bd5, #86eaf1);
+}
+
+/* Login Pane */
+#loginPane {
+    -fx-padding: 20;
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 10, 0, 0, 0);
+}
+
+.button {
+    -fx-background-color: linear-gradient(to bottom, #4facfe, #00c6fb);
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-background-radius: 5;
+    -fx-padding: 5 10;
+    -fx-cursor: hand;
+}
