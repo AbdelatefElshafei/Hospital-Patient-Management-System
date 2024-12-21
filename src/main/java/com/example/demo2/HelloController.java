@@ -271,7 +271,7 @@ public class HelloController {
         String id = SearchI.getText();
         Patient p = pa.findPatientByID(id);
         p.setContactInfo(Cont.getText());
-        showAlert(Alert.AlertType.CONFIRMATION, "Success", "visit added successfully!");
+        showAlert(Alert.AlertType.CONFIRMATION, "Success", "successfully!");
     }
 
     @FXML
